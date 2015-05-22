@@ -1,0 +1,50 @@
+\documentclass[11pt]{resumatic}
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
+
+\name{MY NAME}
+
+\usepackage[backend=bibtex,
+            style=authoryear,
+            sorting=ydnt,
+            defernumbers=true]{biblatex}
+\addbibresource{resumatic.bib}
+
+\newcommand{\printbib}[1]{%
+  \printbibliography[type=#1,heading=none,omitnumbers=true]}
+
+
+
+\begin{document}
+
+\Section{Education}{}
+
+\nocite{myuni}
+\printbib{book}
+
+
+
+\Section{Work Experience}{}
+
+\nocite{myjob}
+\printbib{inproceedings}
+
+
+
+\Section{Publications}{link}
+
+\nocite{mypub}
+\printbib{article}
+
+
+
+\Section{Awards}{}
+
+\nocite{myaward}
+\printbib{thesis}
+
+
+
+
+
+\end{document}
